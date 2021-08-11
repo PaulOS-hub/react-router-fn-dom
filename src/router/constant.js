@@ -11,6 +11,7 @@ const routerConfig = [
   },
   {
     path: "/home",
+
     component: lazy(() => import("../pages/home")), // 懒加载
     children: [
       {
@@ -20,6 +21,7 @@ const routerConfig = [
       {
         path: "/home/children",
         component: Children,
+        needAuth: true,
       },
       {
         path: "/home/brother",

@@ -20,7 +20,9 @@ export const renderRoutes = (routerConfig) =>
             <Route
               key={index}
               {...routeProps}
-              render={(props) => <Component {...props} routes={children} />}
+              render={(props) => (
+                <Component {...routeProps} {...props} routes={children} />
+              )}
             />
           )
         )}
